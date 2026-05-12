@@ -8,3 +8,6 @@ Artinya program publisher dan subscriber terhubung ke instance message broker Ra
 
 ![Console Output](console.png)
 Penjelasan: Saat menjalankan program publisher, program tersebut mengirimkan 5 event ke message broker. Program subscriber, yang secara aktif listening pada queue, langsung mengonsumsi dan memproses event-event tersebut, lalu mencetak detailnya ke layar konsol.
+
+![Chart Spikes](spike.png)
+Penjelasan: spikes pada grafik RabbitMQ terjadi karena publisher mengirimkan beberapa pesan ke dalam queue jauh lebih cepat dibandingkan kondisi idle normal. Setiap kali publisher dijalankan, message rate melonjak drastis dalam waktu singkat, menyebabkan puncak yang terlihat jelas pada grafik "Message rates" sebelum akhirnya kembali turun ke angka nol.
