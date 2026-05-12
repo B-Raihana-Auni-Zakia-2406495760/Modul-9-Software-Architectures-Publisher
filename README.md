@@ -5,3 +5,6 @@ Program publisher akan mengirimkan tepat 5 data ke message broker dalam satu kal
 Artinya program publisher dan subscriber terhubung ke instance message broker RabbitMQ yang sama. Keduanya menggunakan kredensial default yang sama ('guest' sebagai username dan password) pada port yang sama ('5672'). Hal ini memastikan publisher mengirim pesan ke jalur dan antrean yang sama dengan tempat subscriber mendengarkan pesan tersebut.
 
 ![RabbitMQ Setup](rabbitmq.png)
+
+![Console Output](console.png)
+Penjelasan: Saat menjalankan program publisher, program tersebut mengirimkan 5 event ke message broker. Program subscriber, yang secara aktif listening pada queue, langsung mengonsumsi dan memproses event-event tersebut, lalu mencetak detailnya ke layar konsol.
